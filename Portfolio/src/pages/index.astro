@@ -3,12 +3,13 @@ import Layout from "../layouts/Layout.astro";
 
 import Navbar from "../components/Navbar.astro";
 import Button from "../components/Button.astro";
+import About from "../layouts/About.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Navbar />
   <main class="w-full">
-    <h3>Hi, my name is</h3>
+    <h4>Hi, my name is</h4>
     <h1>Daniel Sabelli.</h1>
     <h2>I build things that help people.</h2>
     <summary
@@ -25,4 +26,5 @@ import Button from "../components/Button.astro";
     >
   </main>
   <Button text="Resume" />
+  <About />
 </Layout>
