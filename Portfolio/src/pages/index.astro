@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Button from "../components/Button.astro";
 import About from "../layouts/About.astro";
+import Project from "../layouts/Project";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -27,4 +28,12 @@ import About from "../layouts/About.astro";
   </main>
   <Button text="Resume" />
   <About />
+  <Project
+    title="Project 1"
+    description="Veniam earum est accusamus quaerat ipsa esse voluptatibus labore nemo?"
+    tech={["a", "b", "c"]}
+    webLink="https://www.weatheready.com"
+    githubLink="https://www.todidit.com"
+    image="https://placeimg.com/260/400/arch"
+  />
 </Layout>
