@@ -1,4 +1,4 @@
-import React from "react";
+import { useId } from "react";
 
 interface Props {
   title: string;
@@ -17,7 +17,8 @@ const Project = ({
   githubLink,
   image,
 }: Props) => {
-  const techEls = tech.map((t) => <li>{t}</li>);
+  const id = useId();
+  const techEls = tech.map((t, idx) => <li key={`${id}-${idx}`}>{t}</li>);
 
   return (
     <section>
