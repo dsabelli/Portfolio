@@ -1,45 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import Section from "../layouts/Section.astro";
 import Navbar from "../components/Navbar.astro";
-import Button from "../components/Button.astro";
-import About from "../layouts/About.astro";
-import Project from "../layouts/Project";
-import Contact from "../layouts/Contact.astro";
-import Footer from "../layouts/Footer.astro";
+import About from "../components/About.astro";
+import Project from "../components/Project";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Daniel Sabelli.">
   <Navbar />
-  <main class="w-full">
-    <hgroup>
-      <h4>Hi, my name is</h4>
-      <h1>Daniel Sabelli.</h1>
-      <h2>I build things that help people.</h2>
-    </hgroup>
-    <summary
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, a ex
-      eius delectus esse optio assumenda veniam cupiditate ab, voluptatum
-      aliquid consectetur, quisquam illo? Illum consectetur nam voluptates
-      placeat debitis. A dignissimos quia alias. Quidem perspiciatis dignissimos
-      modi. Veniam earum est accusamus quaerat ipsa esse voluptatibus labore
-      nemo? Enim asperiores autem facere tempore eaque quam pariatur laboriosam
-      illo expedita nisi. Alias, sequi eius fugit laboriosam molestias,
-      distinctio voluptates harum est pariatur, tempore cum excepturi possimus
-      aspernatur. Placeat quod, et soluta harum vitae omnis ea fuga iusto
-      asperiores, quo rerum esse.</summary
-    >
-  </main>
-  <Button text="Resume" />
-  <About />
-  <Project
-    title="Project 1"
-    description="Veniam earum est accusamus quaerat ipsa esse voluptatibus labore nemo?"
-    tech={["a", "b", "c"]}
-    webLink="https://www.weatheready.com"
-    githubLink="https://www.todidit.com"
-    image="https://placeimg.com/260/400/arch"
-  />
-  <Contact />
+  <Section className="bg-base-100"><Hero /></Section>
+  <Section header="About" className="bg-base-200"><About /></Section>
+  <Section header="Projects" className="bg-base-100">
+    <Project
+      title="Project 1"
+      description="Veniam earum est accusamus quaerat ipsa esse voluptatibus labore nemo?"
+      tech={["a", "b", "c"]}
+      webLink="https://www.weatheready.com"
+      githubLink="https://www.todidit.com"
+      image="https://placeimg.com/260/400/arch"
+    />
+    <Project
+      title="Project 2"
+      description="Veniam earum est accusamus quaerat ipsa esse voluptatibus labore nemo?"
+      tech={["a", "b", "c"]}
+      webLink="https://www.weatheready.com"
+      githubLink="https://www.todidit.com"
+      image="https://placeimg.com/260/400/arch"
+    />
+  </Section>
+  <Section header="Contact" className="bg-base-200">
+    <Contact />
+  </Section>
   <Footer />
 </Layout>
