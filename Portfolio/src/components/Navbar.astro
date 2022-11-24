@@ -1,8 +1,13 @@
-<nav>
+---
+import Button from "./Button.astro";
+---
+
+<nav class="w-full md:mt-2">
   <div class="navbar bg-base-100">
-    <div class="navbar-start">
-      <div class="dropdown md:hidden">
-        <label tabindex="0" class="btn btn-ghost lg:hidden">
+    <div class="justify-between w-full">
+      <a href="#" class="btn btn-ghost normal-case text-xl">dS.</a>
+      <div class="dropdown dropdown-end md:hidden">
+        <label tabindex="0" class="btn btn-ghost md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -20,20 +25,19 @@
           tabindex="0"
           class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li><a>Item 1</a></li>
-          <li><a>Item 2</a></li>
-          <li><a>Item 3</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <a class="btn btn-ghost normal-case text-xl">dS.</a>
     </div>
-    <div class="navbar-center hidden md:flex">
+    <div class="navbar-center hidden md:flex md:mr-2">
       <ul class="menu menu-horizontal p-0">
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-        <li><a>Item 3</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <a class="btn">Resume</a>
+      <Button text="Resume" />
     </div>
   </div>
 </nav>
