@@ -6,14 +6,17 @@ import Button from "../components/Button.astro";
 import About from "../layouts/About.astro";
 import Project from "../layouts/Project";
 import Contact from "../layouts/Contact.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Navbar />
   <main class="w-full">
-    <h4>Hi, my name is</h4>
-    <h1>Daniel Sabelli.</h1>
-    <h2>I build things that help people.</h2>
+    <hgroup>
+      <h4>Hi, my name is</h4>
+      <h1>Daniel Sabelli.</h1>
+      <h2>I build things that help people.</h2>
+    </hgroup>
     <summary
       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, a ex
       eius delectus esse optio assumenda veniam cupiditate ab, voluptatum
@@ -38,4 +41,5 @@ import Contact from "../layouts/Contact.astro";
     image="https://placeimg.com/260/400/arch"
   />
   <Contact />
+  <Footer />
 </Layout>
