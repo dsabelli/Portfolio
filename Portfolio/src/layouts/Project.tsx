@@ -33,12 +33,12 @@ const Project = ({
               <a href={githubLink}>githubLink</a>
             </div>
           </div>
-          <div className="w-1/2">
+          <figure className="w-1/2">
             <img
               src={image}
               className="max-w-sm rounded-lg shadow-2xl w-full"
             />
-          </div>
+          </figure>
         </div>
       </div>
     </section>
