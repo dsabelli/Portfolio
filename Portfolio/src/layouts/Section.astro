@@ -1,0 +1,17 @@
+---
+interface Props {
+  className: string;
+  header?: string;
+}
+
+const { className, header } = Astro.props;
+
+const id = header?.toLowerCase();
+---
+
+<section class={`w-full px-4 md:px-0 ${className}`}>
+  <div class="max-w-3xl mx-auto">
+    <h3 id={id}>{header}</h3>
+    <slot />
+  </div>
+</section>
