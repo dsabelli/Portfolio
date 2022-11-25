@@ -2,9 +2,9 @@
 import Button from "../components/Button.astro";
 ---
 
-<div class="w-full hero min-h-screen">
-  <div class="hero-content flex-col">
-    <div class="">
+<div class="hero min-h-screen items-start mt-4 md:items-center md:mt-0">
+  <div class="hero-content flex-col md:mb-32">
+    <div>
       <hgroup class="flex flex-col gap-2 mb-10">
         <h4 class="text-sm md:ml-0.5">Hi, my name is</h4>
         <h1 class="text-4xl md:text-7xl font-bold">Daniel Sabelli.</h1>
@@ -18,6 +18,6 @@ import Button from "../components/Button.astro";
         aliquid consectetur, quisquam illo?
       </p>
     </div>
-    <Button text="Resume" />
+    <Button text="Resume" className="self-start mt-10" />
   </div>
 </div>
