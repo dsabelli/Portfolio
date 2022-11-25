@@ -1,4 +1,4 @@
-import { useId } from "react";
+import React, { useId } from "react";
 
 interface Props {
   title: string;
@@ -22,8 +22,8 @@ const Project = ({
 
   return (
     <div className="p-4">
-      <div className="hero min-h-screen bg-base-200 w-full">
-        <div className="hero-content flex-col lg:flex-row">
+      <div className="hero shadow-2xl rounded-lg bg-base-200">
+        <div className="hero-content flex-col md:flex-row">
           <div className="md:w-1/2">
             <h4>{title}</h4>
             <p className="py-6">{description}</p>
