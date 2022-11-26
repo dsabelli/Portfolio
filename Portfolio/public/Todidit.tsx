@@ -4,9 +4,9 @@ const Todidit = () => {
   return (
     <svg
       data-name="Layer 1"
-      width="70"
+      width="48"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 717.67004 430.74265"
+      viewBox="150 0 417.67004 530.74265"
     >
       <circle cx="346.2124" cy="263.14042" r="165.22325" fill="#fff" />
       <path

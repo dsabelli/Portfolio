@@ -30,15 +30,15 @@ const Project = ({
 
   return (
     <div className="p-4">
-      <div className="hero shadow-2xl rounded-lg bg-base-200">
+      <div className="hero shadow-2xl rounded-lg bg-base-200 p-4">
         <div
           className={`hero-content flex-col h-full ${
             position === "left" ? "md:flex-row-reverse" : "md:flex-row"
           }`}
         >
           <div className="md:w-1/2 h-full">
-            <h4 className="flex items-center gap-4 text-xl font-bold justify-self-start">
-              <div className="w-12">{children}</div>
+            <h4 className="flex items-center gap-2 text-2xl font-bold justify-self-start">
+              <div className="flex justify-center items-center">{children}</div>
               {title}
             </h4>
             <p className="my-6">{description}</p>
