@@ -12,6 +12,7 @@ interface Props {
   githubLink: string;
   image: string;
   position: Position;
+  children: JSX.Element;
 }
 
 const Project = ({
@@ -22,9 +23,10 @@ const Project = ({
   githubLink,
   image,
   position,
+  children,
 }: Props) => {
   const id = useId();
-  const techEls = tech.map((t, idx) => <li key={`${id}-${idx}`}>-{t}</li>);
+  const techEls = tech.map((t, idx) => <li key={`${id}-${idx}`}>{t}</li>);
 
   return (
     <div className="p-4">
@@ -35,10 +37,13 @@ const Project = ({
           }`}
         >
           <div className="md:w-1/2 h-full">
-            <h4 className="text-xl font-bold justify-self-start">{title}</h4>
-            <p className="py-6">{description}</p>
-            <ul className="flex">Stack:{techEls}</ul>
-            <div className="flex flex-end gap-2">
+            <h4 className="flex items-center gap-4 text-xl font-bold justify-self-start">
+              <div className="w-12">{children}</div>
+              {title}
+            </h4>
+            <p className="my-6">{description}</p>
+            <ul className="flex flex-wrap gap-2">Stack:{techEls}</ul>
+            <div className="flex my-6 gap-2">
               <a href={webLink}>
                 <ExternalLink />
               </a>

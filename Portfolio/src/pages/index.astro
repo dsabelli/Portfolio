@@ -7,6 +7,8 @@ import Project from "../components/Project";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import Landing from "../components/Landing.astro";
+import Weatheready from "../../public/Weatheready";
+import Todidit from "../../public/Todidit";
 ---
 
 <Layout title="Daniel Sabelli.">
@@ -15,14 +17,25 @@ import Landing from "../components/Landing.astro";
   <Section header="About" className="bg-base-200"><About /></Section>
   <Section header="Projects" className="bg-base-100">
     <Project
-      title="Project 1"
-      description="Veniam earum est accusamus quaerat ipsa esse voluptatibus labore nemo?"
-      tech={["a", "b", "c"]}
-      webLink="https://www.weatheready.com"
-      githubLink="https://www.todidit.com"
+      title="toDidit"
+      description="A responsive MERN stack productivity application with full CRUD, authentication, registration and email verification, validation, data archiving and lookup features."
+      tech={[
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "API",
+        "Tailwind",
+        "JWT",
+        "Jest",
+      ]}
+      webLink="https://www.todidit.com"
+      githubLink="https://github.com/dsabelli/todidit"
       image="https://placeimg.com/260/400/arch"
       position="right"
-    />
+      ><Todidit />
+    </Project>
+
     <Project
       title="Project 2"
       description="Veniam earum est accusamus quaerat ipsa esse voluptatibus labore nemo?"
@@ -31,7 +44,8 @@ import Landing from "../components/Landing.astro";
       githubLink="https://www.todidit.com"
       image="https://placeimg.com/260/400/arch"
       position="left"
-    />
+      ><Weatheready />
+    </Project>
   </Section>
   <Section header="Contact" className="bg-base-200">
     <Contact />
