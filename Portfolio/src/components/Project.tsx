@@ -29,8 +29,8 @@ const Project = ({
   const techEls = tech.map((t, idx) => <li key={`${id}-${idx}`}>{t}</li>);
 
   return (
-    <div className="p-4">
-      <div className="hero shadow-2xl rounded-lg bg-base-200 p-4">
+    <div className="my-12 px-4">
+      <div className="hero shadow-2xl rounded-lg bg-base-300 p-4">
         <div
           className={`hero-content flex-col h-full ${
             position === "left" ? "md:flex-row-reverse" : "md:flex-row"
@@ -42,7 +42,7 @@ const Project = ({
               {title}
             </h4>
             <p className="my-6">{description}</p>
-            <ul className="flex flex-wrap gap-2">Stack:{techEls}</ul>
+            <ul className="flex flex-wrap gap-2">{techEls}</ul>
             <div className="flex my-6 gap-2">
               <a href={webLink}>
                 <ExternalLink />
