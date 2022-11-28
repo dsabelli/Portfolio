@@ -3,13 +3,15 @@ import Button from "../components/Button.astro";
 ---
 
 <div class="w-full hero">
-  <div class="hero-content flex-col">
+  <div
+    class="hero-content flex-col py-24 justify-center items-end text-end gap-12 max-w-xl"
+  >
+    <h4 class="text-4xl">Get in touch</h4>
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt libero
-      at dolore soluta, doloribus dolorem excepturi, corrupti qui, error
-      molestiae ut ex aperiam sed recusandae repudiandae possimus quidem unde
-      neque!
+      Although I'm not currently looking for any new opportunities, my inbox is
+      always open. Whether you have a question or just want to say hello, I'll
+      try my best to get back to you!
     </p>
-    <Button text="Say Hello" />
+    <Button text="Say Hello" className=" md:btn-lg" />
   </div>
 </div>
