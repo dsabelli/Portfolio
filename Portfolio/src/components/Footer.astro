@@ -1,5 +1,12 @@
 ---
 const year = new Date().getFullYear();
+
+import Email from "../../public/Email";
+import Github from "../../public/Github";
+import Linkedin from "../../public/Linkedin";
+import Resume from "../../public/Resume";
+import Todidit from "../../public/Todidit";
+import Weatheready from "../../public/Weatheready";
 ---
 
 <footer
@@ -8,4 +15,10 @@ const year = new Date().getFullYear();
   <p class="text-sm">
     Copyright © {year} dansabelli.com
   </p>
+  <Github />
+  <Email />
+  <Linkedin />
+  <Resume />
+  <Todidit />
+  <Weatheready />
 </footer>
