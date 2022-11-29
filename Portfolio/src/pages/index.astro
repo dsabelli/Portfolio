@@ -11,43 +11,47 @@ import Weatheready from "../../public/Weatheready";
 import Todidit from "../../public/Todidit";
 ---
 
-<Layout title="Daniel Sabelli.">
+<Layout title="Dan Sabelli.">
   <Navbar />
-  <Section className="bg-base-100 py-0"><Landing /></Section>
-  <Section header="About" className="bg-base-200"><About /></Section>
-  <Section header="Projects" className="bg-base-100">
-    <Project
-      title="toDidit"
-      description="A responsive MERN stack productivity application with full CRUD, authentication, registration and email verification, validation, data archiving and lookup features."
-      tech={[
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "API",
-        "Tailwind",
-        "JWT",
-        "Jest",
-      ]}
-      webLink="https://www.todidit.com"
-      githubLink="https://github.com/dsabelli/todidit"
-      image="https://placeimg.com/260/400/arch"
-      position="right"
-      ><Todidit />
-    </Project>
+  <Section className="bg-base-100"><Landing /></Section>
+  <main>
+    <Section header="About" className="bg-base-100 mb-24 md:mb-32"
+      ><About />
+    </Section>
+    <Section header="Projects" className="bg-base-100 mb-24 md:mb-32">
+      <Project
+        title="toDidit"
+        description="A responsive MERN stack productivity application with full CRUD, authentication, registration and email verification, validation, data archiving and lookup features."
+        tech={[
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "API",
+          "Tailwind",
+          "JWT",
+          "Jest",
+        ]}
+        webLink="https://www.todidit.com"
+        githubLink="https://github.com/dsabelli/todidit"
+        image="https://placeimg.com/260/400/arch"
+        position="left"
+        ><Todidit />
+      </Project>
 
-    <Project
-      title="Project 2"
-      description="Veniam earum est accusamus quaerat ipsa esse voluptatibus labore nemo?"
-      tech={["a", "b", "c"]}
-      webLink="https://www.weatheready.com"
-      githubLink="https://www.todidit.com"
-      image="https://placeimg.com/260/400/arch"
-      position="left"
-      ><Weatheready />
-    </Project>
-  </Section>
-  <Section header="Contact" className="bg-base-200">
+      <Project
+        title="Weather Ready"
+        description="Weather Ready is a weather forecast and clothing recommendation web application that provides users with clothing recommendations based on the weather in their current or searched for location."
+        tech={["Typescript", "React", "Redux", "API", "Tailwind", "Cypress"]}
+        webLink="https://www.weatheready.com"
+        githubLink="https://github.com/dsabelli/weatheready"
+        image="https://placeimg.com/260/400/arch"
+        position="right"
+        ><Weatheready />
+      </Project>
+    </Section>
+  </main>
+  <Section header="Contact" className="bg-base-100 mb-4">
     <Contact />
   </Section>
   <Footer />
