@@ -26,7 +26,11 @@ const Project = ({
   children,
 }: Props) => {
   const id = useId();
-  const techEls = tech.map((t, idx) => <li key={`${id}-${idx}`}>{t}</li>);
+  const techEls = tech.map((t, idx) => (
+    <li className="mr-4" key={`${id}-${idx}`}>
+      {t}
+    </li>
+  ));
 
   return (
     <div className="my-12 px-4">
@@ -37,12 +41,14 @@ const Project = ({
           }`}
         >
           <div className="md:w-1/2 h-full">
-            <h4 className="flex items-center gap-2 text-2xl font-bold justify-self-start">
+            <h4 className="flex items-center gap-2 text-2xl font-bold">
               <div className="flex justify-center items-center">{children}</div>
               {title}
             </h4>
             <p className="my-6">{description}</p>
-            <ul className="flex flex-wrap gap-2">{techEls}</ul>
+            <ul className="flex flex-wrap gap-2 font-mono text-sm">
+              {techEls}
+            </ul>
             <div className="flex my-6 gap-2">
               <a href={webLink}>
                 <ExternalLink />

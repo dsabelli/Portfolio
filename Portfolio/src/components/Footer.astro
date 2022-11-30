@@ -10,15 +10,21 @@ import Weatheready from "../../public/Weatheready";
 ---
 
 <footer
-  class="flex min-h-12 md:min-h-16 justify-center items-center shadow-2xl"
+  class="flex flex-col gap-4 py-4 min-h-12 md:min-h-16 justify-center items-center shadow-2xl"
 >
-  <p class="text-sm">
-    Copyright © {year} dansabelli.com
-  </p>
-  <a target="_blank" href="https://github.com/dsabelli"><Github /></a>
-  <a href="mailto:dsabelli3@gmail.com"><Email /></a>
-  <a target="_blank" href="https://linkedin.com/in/dsabelli"><Linkedin /></a>
-  <a download href="/Daniel Sabelli Resume.pdf"><Resume /></a>
-  <a target="_blank" href="https://todidit.com"><Todidit /></a>
-  <a target="_blank" href="https://weatheready.com"><Weatheready /></a>
+  <div class="flex items-center gap-8">
+    <a target="_blank" href="https://github.com/dsabelli"><Github /></a>
+    <a target="_blank" href="https://linkedin.com/in/dsabelli"><Linkedin /></a>
+    <a href="mailto:dsabelli3@gmail.com"><Email /></a>
+    <a download href="/Daniel Sabelli Resume.pdf"><Resume /></a>
+    <a target="_blank" href="https://todidit.com"><Todidit width="30" /></a>
+    <a target="_blank" href="https://weatheready.com"
+      ><Weatheready width="30" />
+    </a>
+  </div>
+  <div>
+    <p class="text-sm font-mono">
+      Copyright © {year} dansabelli.com
+    </p>
+  </div>
 </footer>
