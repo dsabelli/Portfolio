@@ -1,11 +1,11 @@
 import React from "react";
 
-const Weatheready = () => {
+const Weatheready = ({ width }: { width: string }) => {
   return (
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      width="48"
+      width={width}
       viewBox="225 225 250 250"
     >
       <circle cx="341.6163" cy="349.43208" r="99.43208" fill="#ff6584" />

@@ -1,10 +1,10 @@
 import React from "react";
 
-const Todidit = () => {
+const Todidit = ({ width }: { width: string }) => {
   return (
     <svg
       data-name="Layer 1"
-      width="48"
+      width={width}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="150 0 417.67004 530.74265"
     >
