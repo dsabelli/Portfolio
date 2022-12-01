@@ -37,7 +37,7 @@ const Project = ({
 
   return (
     <div className="my-12 px-4">
-      <div className="hero shadow-2xl rounded-lg bg-base-300 p-4">
+      <div className="hero shadow-2xl rounded-lg bg-base-200 p-4">
         <div
           className={`hero-content flex-col h-full ${
             position === "left" ? "md:flex-row-reverse" : "md:flex-row"
