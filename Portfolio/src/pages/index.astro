@@ -13,12 +13,10 @@ import Todidit from "../../public/Todidit";
 
 <Layout title="Dan Sabelli.">
   <Navbar />
-  <Section className="bg-base-100"><Landing /></Section>
+  <Section><Landing /></Section>
   <main>
-    <Section header="About" className="bg-base-100 mb-24 md:mb-32"
-      ><About />
-    </Section>
-    <Section header="Projects" className="bg-base-100 mb-24 md:mb-32">
+    <Section header="About" className="mb-24 md:mb-32"><About /></Section>
+    <Section header="Projects" className="mb-24 md:mb-32">
       <Project
         title="toDidit"
         description="A responsive MERN stack productivity application with full CRUD, authentication, registration and email verification, validation, data archiving and lookup features."
@@ -51,7 +49,7 @@ import Todidit from "../../public/Todidit";
       </Project>
     </Section>
   </main>
-  <Section header="Contact" className="bg-base-100 mb-4">
+  <Section header="Contact" className="mb-4">
     <Contact />
   </Section>
   <Footer />
