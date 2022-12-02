@@ -45,7 +45,7 @@ const Project = ({
         >
           <div className="md:w-1/3 h-full">
             <h4
-              className={`flex items-center gap-2 text-2xl font-bold ${
+              className={`flex items-center gap-2 text-2xl font-bold text-secondary ${
                 position === "right" ? "" : "md:justify-end"
               }`}
             >
@@ -58,7 +58,7 @@ const Project = ({
               {description}
             </p>
             <ul
-              className={`flex flex-wrap gap-2 font-mono text-sm ${
+              className={`flex flex-wrap gap-2 font-mono text-sm  ${
                 position === "right" ? "" : "md:justify-end"
               }`}
             >
@@ -69,10 +69,10 @@ const Project = ({
                 position === "right" ? "" : "md:justify-end"
               }`}
             >
-              <a href={webLink}>
+              <a className="hover:text-primary" href={webLink}>
                 <ExternalLink />
               </a>
-              <a href={githubLink}>
+              <a className="hover:text-primary" href={githubLink}>
                 <Github />
               </a>
             </div>
