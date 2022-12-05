@@ -18,6 +18,7 @@ import Todidit from "../../public/Todidit";
     <Section header="About" className="mb-24 md:mb-32"><About /></Section>
     <Section header="Projects" className="mb-24 md:mb-32">
       <Project
+        client:visible
         title="toDidit"
         description="A responsive MERN stack productivity application with full CRUD, authentication, registration and email verification, validation, data archiving and lookup features."
         tech={[
@@ -32,18 +33,19 @@ import Todidit from "../../public/Todidit";
         ]}
         webLink="https://www.todidit.com"
         githubLink="https://github.com/dsabelli/todidit"
-        image="https://placeimg.com/260/400/arch"
+        images={["https://placeimg.com/260/400/arch", "dsabelli.png"]}
         position="left"
         ><Todidit width="48" />
       </Project>
 
       <Project
+        client:visible
         title="Weather Ready"
         description="Weather Ready is a weather forecast and clothing recommendation web application that provides users with clothing recommendations based on the weather in their current or searched for location."
         tech={["Typescript", "React", "Redux", "API", "Tailwind", "Cypress"]}
         webLink="https://www.weatheready.com"
         githubLink="https://github.com/dsabelli/weatheready"
-        image="https://placeimg.com/260/400/arch"
+        images={["https://placeimg.com/260/400/arch", "dsabelli.png"]}
         position="right"
         ><Weatheready width="48" />
       </Project>

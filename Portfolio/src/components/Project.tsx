@@ -10,7 +10,7 @@ interface Props {
   tech: string[];
   webLink: string;
   githubLink: string;
-  image: string;
+  images: string[];
   position: Position;
   children: JSX.Element;
 }
@@ -21,7 +21,7 @@ const Project = ({
   tech,
   webLink,
   githubLink,
-  image,
+  images,
   position,
   children,
 }: Props) => {
@@ -33,6 +33,10 @@ const Project = ({
     >
       {t}
     </li>
+  ));
+
+  const imgEls = images.map((image, idx) => (
+    <img key={`${id}=${idx}`} src={image} className="w-full" />
   ));
 
   return (
@@ -77,11 +81,8 @@ const Project = ({
               </a>
             </div>
           </div>
-          <figure className="md:w-2/3 ">
-            <img
-              src={image}
-              className="max-h-96 rounded-lg shadow-2xl w-full"
-            />
+          <figure className="md:w-2/3 max-w-full max-h-96 overflow-auto flex flex-col">
+            {imgEls}
           </figure>
         </div>
       </div>
