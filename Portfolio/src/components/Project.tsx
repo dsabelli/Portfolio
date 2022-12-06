@@ -1,6 +1,7 @@
 import React, { useId } from "react";
 import ExternalLink from "../../public/ExternalLink";
 import Github from "../../public/Github";
+import Carousel from "./Carousel";
 
 type Position = "left" | "right";
 
@@ -35,9 +36,9 @@ const Project = ({
     </li>
   ));
 
-  const imgEls = images.map((image, idx) => (
-    <img key={`${id}=${idx}`} src={image} className="w-full" />
-  ));
+  // const imgEls = images.map((image, idx) => (
+  //   <img key={`${id}=${idx}`} src={image} className="w-full" />
+  // ));
 
   return (
     <div className="my-12 px-4">
@@ -82,7 +83,8 @@ const Project = ({
             </div>
           </div>
           <figure className="md:w-2/3 max-w-full max-h-96 overflow-auto flex flex-col">
-            {imgEls}
+            {/* {imgEls} */}
+            <Carousel>{images}</Carousel>
           </figure>
         </div>
       </div>
