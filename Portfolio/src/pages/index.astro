@@ -18,7 +18,7 @@ import Todidit from "../../public/Todidit";
     <Section header="About" className="mb-24 md:mb-32"><About /></Section>
     <Section header="Projects" className="mb-24 md:mb-32">
       <Project
-        client:visible
+        client:only
         title="toDidit"
         description="A responsive MERN stack productivity application with full CRUD, authentication, registration and email verification, validation, data archiving and lookup features."
         tech={[
@@ -33,19 +33,37 @@ import Todidit from "../../public/Todidit";
         ]}
         webLink="https://www.todidit.com"
         githubLink="https://github.com/dsabelli/todidit"
-        images={["https://placeimg.com/260/400/arch", "dsabelli.png"]}
+        images={[
+          "photos/Todidit-landing.png",
+          "photos/Todidit-todo.png",
+          "photos/Todidit-time-machine.png",
+        ]}
+        mobileImages={[
+          "photos/Todidit-landing-mobile.png",
+          "photos/Todidit-todo-mobile.png",
+          "photos/Todidit-time-machine-mobile.png",
+        ]}
         position="left"
         ><Todidit width="48" />
       </Project>
 
       <Project
-        client:visible
+        client:only
         title="Weather Ready"
         description="Weather Ready is a weather forecast and clothing recommendation web application that provides users with clothing recommendations based on the weather in their current or searched for location."
         tech={["Typescript", "React", "Redux", "API", "Tailwind", "Cypress"]}
         webLink="https://www.weatheready.com"
         githubLink="https://github.com/dsabelli/weatheready"
-        images={["https://placeimg.com/260/400/arch", "dsabelli.png"]}
+        images={[
+          "photos/Weatheready-landing.png",
+          "photos/Weatheready-8-day.png",
+          "photos/Weatheready-today.png",
+        ]}
+        mobileImages={[
+          "photos/Weatheready-landing-mobile.png",
+          "photos/Weatheready-8-day-mobile.png",
+          "photos/Weatheready-today-mobile.png",
+        ]}
         position="right"
         ><Weatheready width="48" />
       </Project>

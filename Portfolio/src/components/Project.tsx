@@ -12,6 +12,7 @@ interface Props {
   webLink: string;
   githubLink: string;
   images: string[];
+  mobileImages: string[];
   position: Position;
   children: JSX.Element;
 }
@@ -23,10 +24,12 @@ const Project = ({
   webLink,
   githubLink,
   images,
+  mobileImages,
   position,
   children,
 }: Props) => {
   const id = useId();
+
   const techEls = tech.map((t, idx) => (
     <li
       className={`${position === "right" ? "mr-4" : "mr-4 md:ml-4 md:mr-0"}`}
@@ -36,19 +39,15 @@ const Project = ({
     </li>
   ));
 
-  // const imgEls = images.map((image, idx) => (
-  //   <img key={`${id}=${idx}`} src={image} className="w-full" />
-  // ));
-
   return (
     <div className="my-12 px-4">
-      <div className="hero shadow-2xl rounded-lg bg-base-200 p-4">
+      <div className="hero rounded-lg bg-base-100 p-4">
         <div
-          className={`hero-content flex-col h-full ${
+          className={`hero-content flex-col h-fit ${
             position === "left" ? "md:flex-row-reverse" : "md:flex-row"
           }`}
         >
-          <div className="md:w-1/3 h-full">
+          <div className="md:w-1/3">
             <h4
               className={`flex items-center gap-2 text-2xl font-bold text-secondary ${
                 position === "right" ? "" : "md:justify-end"
@@ -82,10 +81,15 @@ const Project = ({
               </a>
             </div>
           </div>
-          <figure className="md:w-2/3 max-w-full max-h-96 overflow-auto flex flex-col">
-            {/* {imgEls} */}
-            <Carousel>{images}</Carousel>
-          </figure>
+          <a
+            href={webLink}
+            target="_blank"
+            className="md:w-2/3 transition ease-in-out delay-150 hover:scale-105 md:opacity-60 hover:opacity-100 duration-300  "
+          >
+            <Carousel>
+              {window.innerWidth >= 768 ? images : mobileImages}
+            </Carousel>
+          </a>
         </div>
       </div>
     </div>

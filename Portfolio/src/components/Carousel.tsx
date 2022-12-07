@@ -8,27 +8,30 @@ const Carousel = ({ children }: { children: string[] }) => {
   const id = useId();
 
   const imgEls = children.map((image, idx) => (
-    <SwiperSlide key={`${id}-${idx}`}>
-      <img src={image} className="w-full" />
+    <SwiperSlide key={`${id}-${idx}`} className="w-full h-full">
+      <img
+        src={image}
+        className="w-full h-full md:h-auto object-contain rounded-lg"
+      />
     </SwiperSlide>
   ));
 
   return (
-    <>
-      <Swiper
-        direction={"vertical"}
-        slidesPerView={1}
-        spaceBetween={30}
-        mousewheel={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Mousewheel, Pagination]}
-        className="rounded-lg shadow-2xl"
-      >
-        {imgEls}
-      </Swiper>
-    </>
+    <Swiper
+      direction={"vertical"}
+      slidesPerView={1}
+      spaceBetween={30}
+      mousewheel={true}
+      pagination={{
+        clickable: true,
+        bulletClass:
+          "swiper-pagination-bullet !w-1.5 !h-1.5 !bg-accent md:!w-2 md:!h-2",
+      }}
+      modules={[Mousewheel, Pagination]}
+      className="rounded-lg h-72 md:h-96"
+    >
+      {imgEls}
+    </Swiper>
   );
 };
 
