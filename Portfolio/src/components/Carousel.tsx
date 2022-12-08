@@ -4,6 +4,7 @@ import { Mousewheel, Pagination } from "swiper";
 import "swiper/less";
 import "swiper/less/pagination";
 import "swiper/less/mousewheel";
+import "Carousel.less";
 
 const Carousel = ({ children }: { children: string[] }) => {
   const id = useId();
