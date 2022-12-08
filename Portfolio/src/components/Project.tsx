@@ -1,6 +1,6 @@
 import React, { useId } from "react";
-import ExternalLink from "../../public/ExternalLink";
-import Github from "../../public/Github";
+import ExternalLink from "../../public/Icons/ExternalLink";
+import Github from "../../public/Icons/Github";
 import Carousel from "./Carousel";
 
 type Position = "left" | "right";
