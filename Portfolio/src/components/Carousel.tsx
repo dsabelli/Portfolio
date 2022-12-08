@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/mousewheel";
 
 const Carousel = ({ children }: { children: string[] }) => {
   const id = useId();
@@ -20,7 +21,6 @@ const Carousel = ({ children }: { children: string[] }) => {
     <Swiper
       direction={"vertical"}
       slidesPerView={1}
-      autoHeight={true}
       spaceBetween={30}
       mousewheel={true}
       pagination={{
@@ -29,7 +29,8 @@ const Carousel = ({ children }: { children: string[] }) => {
           "swiper-pagination-bullet !w-1.5 !h-1.5 !bg-accent md:!w-2 md:!h-2",
       }}
       modules={[Mousewheel, Pagination]}
-      className="h-72 md:h-96 z-40"
+      className="h-72 md:h-96"
+      setWrapperSize={true}
     >
       {imgEls}
     </Swiper>
