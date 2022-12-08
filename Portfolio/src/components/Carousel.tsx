@@ -20,7 +20,7 @@ const Carousel = ({ children }: { children: string[] }) => {
     <Swiper
       direction={"vertical"}
       slidesPerView={1}
-      autoHeight={false}
+      autoHeight={true}
       spaceBetween={30}
       mousewheel={true}
       pagination={{
@@ -29,7 +29,7 @@ const Carousel = ({ children }: { children: string[] }) => {
           "swiper-pagination-bullet !w-1.5 !h-1.5 !bg-accent md:!w-2 md:!h-2",
       }}
       modules={[Mousewheel, Pagination]}
-      className="h-72 md:h-96"
+      className="h-72 md:h-96 z-40"
     >
       {imgEls}
     </Swiper>
