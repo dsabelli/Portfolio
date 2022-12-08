@@ -8,7 +8,7 @@ const Carousel = ({ children }: { children: string[] }) => {
   const id = useId();
 
   const imgEls = children.map((image, idx) => (
-    <SwiperSlide key={`${id}-${idx}`} className="w-full h-full">
+    <SwiperSlide key={`${id}-${idx}`}>
       <img
         src={image}
         className="w-full h-full md:h-auto object-contain rounded-lg"
@@ -19,6 +19,7 @@ const Carousel = ({ children }: { children: string[] }) => {
   return (
     <Swiper
       direction={"vertical"}
+      autoHeight={true}
       slidesPerView={1}
       spaceBetween={30}
       mousewheel={true}
