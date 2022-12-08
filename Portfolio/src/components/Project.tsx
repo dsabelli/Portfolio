@@ -82,11 +82,7 @@ const Project = ({
             </div>
           </div>
 
-          <a
-            href={webLink}
-            target="_blank"
-            className="md:w-2/3 transition ease-in-out delay-150 hover:scale-105 md:opacity-60 hover:opacity-100 duration-300  "
-          >
+          <a href={webLink} target="_blank" className="md:w-2/3  ">
             <Carousel>
               {window.innerWidth >= 768 ? images : mobileImages}
             </Carousel>
