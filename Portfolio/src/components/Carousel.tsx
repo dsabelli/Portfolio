@@ -10,26 +10,28 @@ const Carousel = ({ children }: { children: string[] }) => {
 
   const imgEls = children.map((image, idx) => (
     <SwiperSlide key={`${id}-${idx}`} className="">
-      <img src={image} className="w-full h-full object-contain block" />
+      <img src={image} className="w-full h-full object-contain " />
     </SwiperSlide>
   ));
 
   return (
-    <Swiper
-      direction={"vertical"}
-      slidesPerView={1}
-      spaceBetween={30}
-      mousewheel={true}
-      pagination={{
-        clickable: true,
-        bulletClass:
-          "swiper-pagination-bullet !w-1.5 !h-1.5 !bg-accent md:!w-2 md:!h-2",
-      }}
-      modules={[Mousewheel, Pagination]}
-      className="mySwiper w-full h-full"
-    >
-      {imgEls}
-    </Swiper>
+    <>
+      <Swiper
+        direction={"vertical"}
+        slidesPerView={1}
+        spaceBetween={30}
+        mousewheel={true}
+        pagination={{
+          clickable: true,
+          bulletClass:
+            "swiper-pagination-bullet !w-1.5 !h-1.5 !bg-accent md:!w-2 md:!h-2",
+        }}
+        modules={[Mousewheel, Pagination]}
+        className="h-full"
+      >
+        {imgEls}
+      </Swiper>
+    </>
   );
 };
 

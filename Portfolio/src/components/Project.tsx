@@ -43,7 +43,7 @@ const Project = ({
     <div className="my-12 px-4">
       <div className="hero rounded-lg bg-base-100 p-4">
         <div
-          className={`hero-content flex-col h-fit ${
+          className={`hero-content flex-col  ${
             position === "left" ? "md:flex-row-reverse" : "md:flex-row"
           }`}
         >
@@ -81,15 +81,17 @@ const Project = ({
               </a>
             </div>
           </div>
-          <a
-            href={webLink}
-            target="_blank"
-            className="md:w-2/3 transition ease-in-out delay-150 hover:scale-105 md:opacity-60 hover:opacity-100 duration-300  "
-          >
-            <Carousel>
-              {window.innerWidth >= 768 ? images : mobileImages}
-            </Carousel>
-          </a>
+          <div className=" h-72 md:h-96">
+            <a
+              href={webLink}
+              target="_blank"
+              className="md:w-2/3 transition ease-in-out delay-150 hover:scale-105 md:opacity-60 hover:opacity-100 duration-300  "
+            >
+              <Carousel>
+                {window.innerWidth >= 768 ? images : mobileImages}
+              </Carousel>
+            </a>
+          </div>
         </div>
       </div>
     </div>
