@@ -1,37 +1,89 @@
 import React, { useId } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/mousewheel";
+import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+
+const WheelControls: KeenSliderPlugin = (slider) => {
+  let touchTimeout: ReturnType<typeof setTimeout>;
+  let position: {
+    x: number;
+    y: number;
+  };
+  let wheelActive: boolean;
+
+  function dispatch(e: WheelEvent, name: string) {
+    position.x -= e.deltaX;
+    position.y -= e.deltaY;
+    slider.container.dispatchEvent(
+      new CustomEvent(name, {
+        detail: {
+          x: position.x,
+          y: position.y,
+        },
+      })
+    );
+  }
+
+  function wheelStart(e: WheelEvent) {
+    position = {
+      x: e.pageX,
+      y: e.pageY,
+    };
+    dispatch(e, "ksDragStart");
+  }
+
+  function wheel(e: WheelEvent) {
+    dispatch(e, "ksDrag");
+  }
+
+  function wheelEnd(e: WheelEvent) {
+    dispatch(e, "ksDragEnd");
+  }
+
+  function eventWheel(e: WheelEvent) {
+    e.preventDefault();
+    if (!wheelActive) {
+      wheelStart(e);
+      wheelActive = true;
+    }
+    wheel(e);
+    clearTimeout(touchTimeout);
+    touchTimeout = setTimeout(() => {
+      wheelActive = false;
+      wheelEnd(e);
+    }, 50);
+  }
+
+  slider.on("created", () => {
+    slider.container.addEventListener("wheel", eventWheel, {
+      passive: false,
+    });
+  });
+};
 
 const Carousel = ({ children }: { children: string[] }) => {
+  const [sliderRef] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: false,
+      rubberband: false,
+      vertical: true,
+    },
+    [WheelControls]
+  );
   const id = useId();
 
   const imgEls = children.map((image, idx) => (
-    <SwiperSlide key={`${id}-${idx}`} className="">
+    <div
+      key={`${id}-${idx}`}
+      className={`keen-slider__slide number-slide${idx}`}
+    >
       <img src={image} className="w-full h-full object-contain " />
-    </SwiperSlide>
+    </div>
   ));
 
   return (
-    <>
-      <Swiper
-        direction={"vertical"}
-        slidesPerView={1}
-        spaceBetween={30}
-        mousewheel={true}
-        pagination={{
-          clickable: true,
-          bulletClass:
-            "swiper-pagination-bullet !w-1.5 !h-1.5 !bg-accent md:!w-2 md:!h-2",
-        }}
-        modules={[Mousewheel, Pagination]}
-        className="h-full"
-      >
-        {imgEls}
-      </Swiper>
-    </>
+    <div ref={sliderRef} className="keen-slider h-72 md:h-96">
+      {imgEls}
+    </div>
   );
 };
 
