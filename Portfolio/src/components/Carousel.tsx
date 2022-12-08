@@ -8,10 +8,10 @@ const Carousel = ({ children }: { children: string[] }) => {
   const id = useId();
 
   const imgEls = children.map((image, idx) => (
-    <SwiperSlide key={`${id}-${idx}`}>
+    <SwiperSlide key={`${id}-${idx}`} className="w-full h-full">
       <img
         src={image}
-        className="w-full h-full md:h-auto object-contain rounded-lg"
+        className="h-72 md:h-96 object-contain overflow-hidden"
       />
     </SwiperSlide>
   ));
@@ -19,8 +19,8 @@ const Carousel = ({ children }: { children: string[] }) => {
   return (
     <Swiper
       direction={"vertical"}
-      autoHeight={true}
       slidesPerView={1}
+      autoHeight={false}
       spaceBetween={30}
       mousewheel={true}
       pagination={{
@@ -29,7 +29,7 @@ const Carousel = ({ children }: { children: string[] }) => {
           "swiper-pagination-bullet !w-1.5 !h-1.5 !bg-accent md:!w-2 md:!h-2",
       }}
       modules={[Mousewheel, Pagination]}
-      className="rounded-lg h-72 md:h-96"
+      className="h-72 md:h-96"
     >
       {imgEls}
     </Swiper>
