@@ -1,12 +1,11 @@
 ---
-const year = new Date().getFullYear();
-
 import Email from "../../public/Icons/Email";
 import Github from "../../public/Icons/Github";
 import Linkedin from "../../public/Icons/Linkedin";
 import Resume from "../../public/Icons/Resume";
 import Todidit from "../../public/Icons/Todidit";
 import Weatheready from "../../public/Icons/Weatheready";
+import Year from "./Year";
 ---
 
 <footer
@@ -49,9 +48,5 @@ import Weatheready from "../../public/Icons/Weatheready";
       ><Weatheready width="30" />
     </a>
   </div>
-  <div>
-    <p class="text-sm font-mono">
-      Copyright © {year} dansabelli.com
-    </p>
-  </div>
+  <Year client:visible />
 </footer>
