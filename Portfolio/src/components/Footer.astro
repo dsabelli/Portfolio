@@ -3,6 +3,7 @@ import Email from "../../public/Icons/Email";
 import Github from "../../public/Icons/Github";
 import Linkedin from "../../public/Icons/Linkedin";
 import Resume from "../../public/Icons/Resume";
+import Rpgoracles from "../../public/Icons/Rpgoracles";
 import Todidit from "../../public/Icons/Todidit";
 import Weatheready from "../../public/Icons/Weatheready";
 import Year from "./Year";
@@ -11,7 +12,7 @@ import Year from "./Year";
 <footer
   class="flex flex-col gap-4 py-8 min-h-12 md:min-h-16 justify-center items-center shadow-2xl bg-base-100"
 >
-  <div class="flex items-center gap-8 py-6">
+  <div class="flex items-center gap-4 md:gap-8 py-6">
     <a
       class="hover:text-primary md:hover:pb-2"
       target="_blank"
@@ -36,16 +37,22 @@ import Year from "./Year";
       ><Resume />
     </a>
     <a
-      class="md:hover:-translate-y-1"
+      class="md:hover:-translate-y-1 md:mt-2"
       target="_blank"
-      href="https://todidit.com"
-      ><Todidit width="30" />
+      href="https://rpgoracles.com"
+      ><Rpgoracles width="36" />
     </a>
     <a
       class="md:hover:-translate-y-1"
       target="_blank"
       href="https://weatheready.com"
       ><Weatheready width="30" />
+    </a>
+    <a
+      class="md:hover:-translate-y-1"
+      target="_blank"
+      href="https://todidit.com"
+      ><Todidit width="30" />
     </a>
   </div>
   <Year client:visible />
