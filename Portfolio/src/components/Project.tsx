@@ -13,6 +13,7 @@ interface Props {
   githubLink: string;
   images: string[];
   mobileImages: string[];
+  altText: string[];
   position: Position;
   children: JSX.Element;
 }
@@ -25,6 +26,7 @@ const Project = ({
   githubLink,
   images,
   mobileImages,
+  altText,
   position,
   children,
 }: Props) => {
@@ -83,7 +85,7 @@ const Project = ({
           </div>
           <div className="md:w-2/3 h-72 md:h-96 transition ease-in-out delay-150 hover:scale-105 md:opacity-60 hover:opacity-100 duration-300 ">
             <a href={webLink} target="_blank">
-              <Carousel>
+              <Carousel altText={altText}>
                 {window.innerWidth >= 768 ? images : mobileImages}
               </Carousel>
             </a>

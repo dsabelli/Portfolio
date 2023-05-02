@@ -2,12 +2,22 @@ import React, { useId } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
 
-const Carousel = ({ children }: { children: string[] }) => {
+const Carousel = ({
+  children,
+  altText,
+}: {
+  children: string[];
+  altText: string[];
+}) => {
   const id = useId();
 
   const imgEls = children.map((image, idx) => (
     <SwiperSlide key={`${id}-${idx}`} className="">
-      <img src={image} className="w-full h-full object-contain " />
+      <img
+        src={image}
+        alt={altText[idx]}
+        className="w-full h-full object-contain "
+      />
     </SwiperSlide>
   ));
 
